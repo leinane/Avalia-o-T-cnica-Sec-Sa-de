@@ -17,11 +17,11 @@ Esse projeto é um sistema de cadrastro de usuários!
 A pagína web foi desenvolvida utilizando a linguagem C#, ASP.NET Core MVC, utilizando o método CRUDS para fazer a requisições
 ao banco de dados SQL Server.
 
-#### `[GET]` /Usuarios/create
-#### `[POST]` /Usuarios/create
-#### `[GET]` Usuarios/Edit
+#### `[GET]`  Usuarios/create
+#### `[POST]` Usuarios/create
+#### `[GET]`  Usuarios/Edit
 #### `[POST]` Usuarios/Edit
-#### `[GET]` Usuarios/Delete
+#### `[GET]`  Usuarios/Delete
 #### `[POST]` Usuarios/Delete
 
 ---
