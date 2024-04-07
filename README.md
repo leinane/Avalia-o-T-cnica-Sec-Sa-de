@@ -18,7 +18,10 @@ A pagína web foi desenvolvida utilizando a linguagem C#, ASP.NET Core MVC, util
 ao banco de dados SQL Server.
 
 #### `[GET]` /Usuarios/create
+#### `[POST]` /Usuarios/create
 #### `[GET]` Usuarios/Edit
+#### `[POST]` Usuarios/Edit
+#### `[GET]` Usuarios/Delete
 #### `[POST]` Usuarios/Delete
 
 ---
