@@ -120,3 +120,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 | Xunit              |        |
 
 
+### Autor do Projeto
+Link: https://github.com/leinane 
+
+
