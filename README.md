@@ -121,9 +121,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 ### Autor do Projeto
-<a href="https://github.com/leinane ">
-       
-    </a>
+<link href="https://github.com/leinane "> 
  
 
 
