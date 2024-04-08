@@ -15,7 +15,7 @@ Esse projeto é um sistema de cadrastro de usuários!
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), SQL server. 
+[Git](https://git-scm.com), SQL Server. 
 Além disto é bom ter um editor para trabalhar com o código como Visual Studio.
 
 ### 🎲 Rodando o Back End (servidor)
