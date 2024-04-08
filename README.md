@@ -85,13 +85,16 @@ MVC
 │  │  └─ Contexto.cs
 │  │  └─ ErrorViewModel.cs
 |  |  └─ Usuario.cs
+|  └─📂 Repository
 |  ├─ 📂 Views
 │  │  └─📂 Home
 │  ├  └─📂 Shared
 │  │  └─📂 Usuarios
-│  ├
+|  |
+│  ├  
 │  └─ appsettinsgs.json
 │  └─ Program.cs
+|  └─📂 TestProject1
 │  
 ├─ README.md
 
@@ -121,7 +124,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 
 ### Autor do Projeto
-<link href="https://github.com/leinane "> 
- 
+Leinane Santos da Conceição  
 
 
