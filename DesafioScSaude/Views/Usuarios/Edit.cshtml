@@ -56,7 +56,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Perfil" class="control-label"></label>
-                <input asp-for="Perfil" class="form-control" />
+                <select asp-for="Perfil" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="Admin">Admin</option>
+                    <option value="Supervisor">Supervisor</option>
+                    <option value="Operador">Operador</option>
+                </select>
                 <span asp-validation-for="Perfil" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -107,7 +112,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-secondary" asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {

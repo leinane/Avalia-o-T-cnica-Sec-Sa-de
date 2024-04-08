@@ -1,34 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using DesafioScSaude.Models;
+using DesafioScSaude.Repository;
 
 namespace DesafioScSaude.Controllers
 {
     public class UsuariosController : Controller
     {
-        private readonly Contexto _context;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public UsuariosController(Contexto context)
+        public UsuariosController(IUsuarioRepository usuarioRepository)
         {
-            _context = context;
+            _usuarioRepository = usuarioRepository;
         }
 
         // GET: Usuarios
         public async Task<IActionResult> Index()
         {
-            return View(await _context.usuarios.ToListAsync());
+            List<Usuario> usuarios = _usuarioRepository.GetAll();
+            return View(usuarios);
         }
 
         // GET: Usuarios/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var usuario = _usuarioRepository.Get(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -54,22 +55,23 @@ namespace DesafioScSaude.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(usuario);
-                await _context.SaveChangesAsync();
+                _usuarioRepository.Add(usuario);
+                //_context.Add(usuario);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(usuario);
         }
 
         // GET: Usuarios/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.usuarios.FindAsync(id);
+            var usuario = _usuarioRepository.Get(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -94,8 +96,7 @@ namespace DesafioScSaude.Controllers
             {
                 try
                 {
-                    _context.Update(usuario);
-                    await _context.SaveChangesAsync();
+                    _usuarioRepository.Update(usuario);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -114,15 +115,14 @@ namespace DesafioScSaude.Controllers
         }
 
         // GET: Usuarios/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> Delete(int id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var usuario = await _context.usuarios
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var usuario = _usuarioRepository.Get(id);
             if (usuario == null)
             {
                 return NotFound();
@@ -136,19 +136,18 @@ namespace DesafioScSaude.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var usuario = await _context.usuarios.FindAsync(id);
+            var usuario = _usuarioRepository.Get(id);
             if (usuario != null)
             {
-                _context.usuarios.Remove(usuario);
+                _usuarioRepository.Delete(usuario);
             }
 
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool UsuarioExists(int id)
         {
-            return _context.usuarios.Any(e => e.Id == id);
+            return _usuarioRepository.Exist(id);
         }
     }
 }

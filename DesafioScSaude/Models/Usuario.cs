@@ -10,7 +10,6 @@ namespace DesafioScSaude.Models
         [Display(Name = "ID")]  
         public int Id { get; set; }
 
-        
         [Column("Nome")]
         [Display(Name = "Nome")]
         public string Name { get; set; }
