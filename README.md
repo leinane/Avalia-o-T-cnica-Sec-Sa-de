@@ -12,30 +12,59 @@ Esse projeto é um sistema de cadrastro de usuários!
 
 ---
 
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [SQL server]. 
+Além disto é bom ter um editor para trabalhar com o código como [VS].
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/leinane/Avaliacao-Tecnica-Sec-Saude>
+
+# Acesse o projeto pela IDE de sua escolha
+
+# Vá para o arquivo program.cs
+$ E mude a string que faz conexão com o banco de dados.
+
+# Para criar a tabela no seu banco de dados, utilize o script de criação de tabela, que está na raiz do projeto ou
+execute este comando no terminal:
+$ Update-database -Context Contexto
+
+# Execute a aplicação em modo de desenvolvimento
+$ F5
+
+# O servidor inciará 
+```
+
 ### Métodos
 
-A pagína web foi desenvolvida utilizando a linguagem C#, ASP.NET Core MVC, utilizando o método CRUDS para fazer a requisições
-ao banco de dados SQL Server.
+A pagína web foi desenvolvida utilizando a linguagem C#, ASP.NET Core MVC e Enity Framework, 
+as seguintes requisições são efetuadas no banco de dados SQL Server:
 
-#### `[GET]`  Usuarios/create
 #### `[POST]` Usuarios/create
-#### `[GET]`  Usuarios/Edit
 #### `[POST]` Usuarios/Edit
-#### `[GET]`  Usuarios/Delete
 #### `[POST]` Usuarios/Delete
+
+---
+
+### Testes
+
+Os testes unitarios foram realizados utilizando o framework Xunit
+$ Para fazer a execução dos testes, você pode rodar o comando CTRL+R, A. 
+
 
 ---
 
 ### Funcionalidaes
 
-<body>
-<ol>
-<li>Cadastrar Usuário</li>
-<li>Editar os dados cadastrais do Usuário</li>
-<li>Verificar os detalhes do cadastro;</li>
-<li>Deletar um Usuário.</li>
-</ol>
-</body>
+
+- [x] Cadastrar Usuário
+- [x] Editar os dados cadastrais do Usuário
+- [x] Verificar os detalhes do cadastro;
+- [x] Deletar um Usuário.
 
 
 ### Arquitetura do projeto - MVC
@@ -70,16 +99,15 @@ MVC
 ```
 ---
 
-### Tecnologias utilizadas
+## 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
 
-| Tecnologias Utilizadas |
-| ---------------------- |
-| C#                     |
-| GitHub                 |
-| JavaScript             |
-| SQL Server             |
-| CSS/HTML               |
-| VS                     |
+- [C#]
+- [JavaScript]
+- [SQL Server]
+- [CSS/HTML]
+- [VS]
+
 
 ---
 
