@@ -15,8 +15,8 @@ Esse projeto é um sistema de cadrastro de usuários!
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [SQL server]. 
-Além disto é bom ter um editor para trabalhar com o código como [VS].
+[Git](https://git-scm.com), SQL server. 
+Além disto é bom ter um editor para trabalhar com o código como Visual Studio.
 
 ### 🎲 Rodando o Back End (servidor)
 
@@ -102,11 +102,11 @@ MVC
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [C#]
-- [JavaScript]
-- [SQL Server]
-- [CSS/HTML]
-- [VS]
+- C#
+- JavaScript
+- SQL Server
+- CSS/HTML
+- VS
 
 
 ---
@@ -117,5 +117,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 |   Dependência      | Versão |
 | -------------------| ------ |     
 | Enity Frameworkcore| >= 8   |
+| Xunit              |        |
 
 
